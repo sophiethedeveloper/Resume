@@ -1,0 +1,271 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	background-color: @backgroundColor;
+}
+
+@backgroundColor: #F2EBEC;
+@magenta: #E83556;
+@lightBlue: #61D0D4;
+@yellow: #D1C926;
+@headingColor: #4D4D4D;
+
+.flex {
+	display: flex;
+}
+
+.headingFont {
+	font-family: 'Pacifico', cursive;
+}
+
+.middle-circles {
+	padding: 4rem;
+	border-radius: 50%;
+	color: #ffffff;
+	margin: 1rem;
+	font-weight: bold;
+}
+
+.resume-circles {
+	padding: 5rem;
+	border-radius: 60%;
+	color: #ffffff;
+	margin: 1rem;
+	font-weight: bold;
+	background-color: @magenta;
+	font-size: 1.5rem;
+}
+
+.container {
+	width: 100%;
+	margin: 2rem auto;
+}
+
+// Code for Header
+
+header {
+	width: 80%;
+	.flex();
+	justify-content: center;
+	
+	.main-header {
+		width: 50%;
+		margin-left: 9rem;
+	
+		h1 {
+			font-size: 6rem;
+			.headingFont();
+			color: @magenta;
+			margin-top: 10px;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+			margin: 2rem;
+		}
+	}
+
+	.navbar {
+		width: 50%;
+		
+		.nav-links {
+			.flex();
+			justify-content: space-between;
+			margin-top: 3rem;
+
+			.nav-item {
+				font-size: 2rem;
+				text-decoration: none;
+				color: @headingColor;
+
+				&:hover {
+					color: @lightBlue;
+				}
+			}
+		}
+	}
+
+}
+
+// Main Section for the Home Page
+
+main {
+	.flex();
+	align-items: center;
+	justify-content: center;
+	margin-top: 4rem;
+
+	.self-portrait {
+
+		img {
+			width: 30rem;
+			border-radius: 50%;
+		}
+	}
+
+	.biography {
+		margin: 3rem;
+
+		h2 {
+			font-size: 8.5rem;
+			color: @headingColor;
+		}
+		h3 {
+			font-size: 5rem;
+			color: @headingColor;
+		}
+
+		.links {
+			.flex();
+			font-size: 1.5rem;
+			justify-content: space-between;
+			margin-top: 2rem;
+			
+			#resume {
+				background-color: @magenta;
+				.middle-circles();
+			}
+
+			#work {
+				background-color: @lightBlue;
+				.middle-circles();
+			}
+
+			#skills {
+				background-color: @yellow;
+				.middle-circles();
+			}
+		}
+	}
+}
+
+// Resume Section
+
+section {
+	.flex();
+
+	.resume{
+		width: 80%;
+		// .flex();
+		// flex-direction: column;
+		// justify-content: center;
+
+		.title {
+			h2 {
+				font-size: 6rem;
+				color: @headingColor;
+			}
+		}
+
+		.professional-info {
+			.flex();
+
+			.info-title {
+				.resume-circles();
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer code
+footer {
+	background-color: @magenta;
+	color: #F2EBEC;
+	padding: 3rem;
+	margin: 7rem 0 0 0;
+  	bottom: 0;
+     
+	.footer-info {
+		.flex();
+		justify-content: space-around;
+		font-size: 1.8rem;
+	
+		.icon {
+			.flex();
+			font-size: 2.5rem;
+			justify-content: space-between;
+			margin: 0.5rem 0 1rem 0;
+
+			&:hover{
+				color: @lightBlue;
+			}
+		}
+	}
+}
